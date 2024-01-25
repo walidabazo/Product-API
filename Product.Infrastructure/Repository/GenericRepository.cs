@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Product.Core.Entities;
 using Product.Core.Interface;
 using Product.Infrastructure.Data;
 using System;
@@ -8,9 +9,10 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Product.Infrastructure.Repository
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : BasicEntity<int>
     {
         private readonly ApplicationDbContext _context;
 
@@ -39,7 +41,7 @@ namespace Product.Infrastructure.Repository
 
         public async Task<IReadOnlyList<T>> GetAllAsync()
         => await _context.Set<T>().AsNoTracking().ToListAsync();
-        public async Task<IEnumerable<T>> GetAllAsync(params Expression<Func<T, bool>>[] includes)
+        public async Task<IEnumerable<T>> GetAllAsync(params Expression<Func<T, object>>[] includes)
         {
             var query = _context.Set<T>().AsQueryable();
             foreach (var item in includes)
@@ -53,15 +55,17 @@ namespace Product.Infrastructure.Repository
         public async Task<T> GetAsync(int id)
      => await _context.Set<T>().FindAsync(id);
 
-        public async Task<T> GetByidAsync(T id, params Expression<Func<T, bool>>[] includes)
+        public async Task<T> GetByidAsync(int id, params Expression<Func<T, object>>[] includes)
         {
-            IQueryable<T> query = _context.Set<T>();
+            //  IQueryable<T> query = _context.Set<T>();
+            IQueryable<T> query = _context.Set<T>().Where(x => x.Id == id);
             foreach (var item in includes)
             {
                 query = query.Include(item);
 
             }
-            return await ((DbSet<T>)query).FindAsync();
+            return await query.FirstOrDefaultAsync();
+          //  return await ((DbSet<T>)query).FindAsync();
 
         }
 

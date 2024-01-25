@@ -6,15 +6,22 @@ using System.Threading.Tasks;
 
 namespace Product.Core.Entities
 {
-    public class Products
+    public class Products: BasicEntity<int>
     {
-        public int Id { get; set; }
+        // public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public decimal Price { get; set; }
 
-        //navication property
-        public int Categoryid { get; set; }
+        public decimal Price { get; set; }
+        public string ProductPicture { get; set; }
+
+        //Navigtional Property
+
+        public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
+
+  
+
+
     }
 }
