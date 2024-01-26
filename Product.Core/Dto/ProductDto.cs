@@ -32,4 +32,14 @@ namespace Product.Infrastructure.Data
         public int CategoryId { get; set; }
         public IFormFile Image { get; set; }
     }
+    //Update Product
+    public class UpdateProductDto : BaseProduct
+    {
+     
+            public int CategoryId { get; set; }
+          public string OldImage { get; set; }
+            public IFormFile Image { get; set; }
+       
+    }
+
 }
