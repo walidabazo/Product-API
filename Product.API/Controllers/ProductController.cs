@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Product.API.Errors;
+using Product.API.MyHelper;
 using Product.Core.Entities;
 using Product.Core.Interface;
+using Product.Core.Sharing;
 using Product.Infrastructure.Data;
 
 namespace Product.API.Controllers
@@ -21,12 +23,13 @@ namespace Product.API.Controllers
         }
 
         [HttpGet("get-all-products")]
-        public async Task<ActionResult> get()
+        public async Task<ActionResult> get([FromQuery] ProductParams productParams)
         {
-            var res = await _uow.ProductRepository.GetAllAsync(x => x.Category);
+            var res = await _uow.ProductRepository.GetAllAsync(productParams);
+            var totalitems = await _uow.ProductRepository.CountAsync();
             var result = _mapper.Map<List<ProductDto>>(res);
 
-            return Ok(result);
+            return Ok(new Pagination<ProductDto>(productParams.PageNumber,productParams.Pagesize, totalitems, result));
         }
 
         [HttpGet("get-product-by-id/{id}")]

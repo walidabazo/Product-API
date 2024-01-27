@@ -78,5 +78,8 @@ namespace Product.Infrastructure.Repository
                 await _context.SaveChangesAsync();
             }
         }
+
+       public async Task<int> CountAsync()
+        =>await _context.Set<T>().CountAsync();
     }
 }

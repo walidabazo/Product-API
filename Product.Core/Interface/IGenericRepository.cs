@@ -24,5 +24,6 @@ namespace Product.Core.Interface
         Task DeleteAsync(int id);
 
         Task UpdateAsync(int id, T Entity);
+        Task <int>CountAsync();
     }
 }

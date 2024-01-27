@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using Azure.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Product.Core.Entities;
 using Product.Core.Interface;
+using Product.Core.Sharing;
 using Product.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
@@ -27,6 +29,42 @@ namespace Product.Infrastructure.Repository
             _fileProvider = fileProvider;
             _mapper = mapper;
 
+        }
+
+
+        public async Task<IEnumerable<ProductDto>> GetAllAsync(ProductParams productParams)
+        {
+            var query = await _context.Products.Include(x => x.Category).AsNoTracking().ToListAsync();
+
+            //search
+            if(!string.IsNullOrEmpty(productParams.Search))
+               query = query.Where(x => x.Name.ToLower().Contains(productParams.Search)).ToList();
+
+                //Filter by category Id 
+                if (productParams.Categoryid.HasValue)
+            { 
+             query = query.Where(x=>x.CategoryId==productParams.Categoryid.Value).ToList();
+            }
+
+            //Sorting
+        
+            if (!string.IsNullOrEmpty(productParams.Sorting))
+            {
+                query = productParams.Sorting switch
+                {
+                    "PriceAsc" => query.OrderBy(x => x.Price).ToList(),
+                    "PriceDesc" => query.OrderByDescending(x => x.Price).ToList(),
+                    _ => query.OrderBy(x => x.Name).ToList()
+                };
+          
+            }
+            
+            //Page Size
+            query=query.Skip((productParams.Pagesize)*(productParams.PageNumber-1))
+                .Take(productParams.Pagesize).ToList();
+           
+            var _result = _mapper.Map<List<ProductDto>>(query);
+            return _result;
         }
 
         public async Task<bool> AddAsync(CreateProductDto dto)
