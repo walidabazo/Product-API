@@ -16,6 +16,10 @@ namespace Product.API.Models
 
             CreateMap<CreateProductDto,Products>().ReverseMap();
             CreateMap<Products,UpdateProductDto>() .ReverseMap();
+
+        
+       
+       
         }
     }
 }

@@ -23,13 +23,19 @@ namespace Product.API.Controllers
         }
 
         [HttpGet("get-all-products")]
-        public async Task<ActionResult> get([FromQuery] ProductParams productParams)
+        public async Task<ActionResult> Get([FromQuery] ProductParams productParams)
         {
-            var res = await _uow.ProductRepository.GetAllAsync(productParams);
-            var totalitems = await _uow.ProductRepository.CountAsync();
-            var result = _mapper.Map<List<ProductDto>>(res);
 
-            return Ok(new Pagination<ProductDto>(productParams.PageNumber,productParams.Pagesize, totalitems, result));
+            //var src = await _uOW.ProductRepository.GetAllAsync(productParams);
+            //var result = _mapper.Map<IReadOnlyList<ProductDto>>(src.ProductDtos);
+
+            //return Ok(new Pagination<ProductDto>(productParams.PageNumber, productParams.PageSize, src.TotalItems, result));
+
+            var src = await _uow.ProductRepository.GetAllAsync(productParams);
+            //var totalitems = await _uow.ProductRepository.CountAsync();
+            var result = _mapper.Map<IReadOnlyList<ProductDto>>(src.ProductDtos);
+
+            return Ok(new Pagination<ProductDto>(productParams.PageNumber,productParams.Pagesize, src.TotalItems, result));
         }
 
         [HttpGet("get-product-by-id/{id}")]

@@ -10,7 +10,7 @@ namespace Product.Infrastructure.Data
 {
     public class BaseProduct
     {
-        [Required]
+       [Required]
         public string Name { get; set; }
         [MaxLength(50)]
         public string Description { get; set; }
@@ -26,7 +26,11 @@ namespace Product.Infrastructure.Data
         public string CategoryName { get; set; }
         public string ProductPicture { get; set; }
     }
-
+    public class ReturnProductDto
+    {
+        public int TotalItems { get; set; }
+        public List<ProductDto> ProductDtos { get; set; }
+    }
     public class CreateProductDto : BaseProduct 
     {
         public int CategoryId { get; set; }
