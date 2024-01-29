@@ -13,7 +13,7 @@ builder.Services.AddApiReguestration();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
+//builder.Services.AddEndpointsApiExplorer();
 builder.Services.InfraStructureConfigration(builder.Configuration);
 
 var app = builder.Build();
