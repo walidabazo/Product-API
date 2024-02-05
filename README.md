@@ -31,8 +31,9 @@ ASP.NET Core Web API Tutorial- asp.net core web api is the latest and most power
 - Api Swagger <br />
 - Postman <br />
 
-
-### Video 3 have : Coming soon (5/2/2024)
+[![Watch the video](https://img.youtube.com/vi/LSrVodbZW2I/0.jpg)](https://youtu.be/LSrVodbZW2I)
+<br /><br />
+### Video 3 have 
 - Shaping Return Data  <br />
 - Adding Automapper Configure <br />
 - BasicEntity <br />
@@ -42,14 +43,18 @@ ASP.NET Core Web API Tutorial- asp.net core web api is the latest and most power
 - Insert with Validation  <br />
 - Insert Upload Image <br />
 
-### Video 4 have : Coming soon (8/2/2024)
+[![Watch the video](https://img.youtube.com/vi/dqCiqQVD_qI/0.jpg)](https://youtu.be/dqCiqQVD_qI)
+<br /><br />
+### Video 4 have : 
 - Url Resolver  <br />
 - Update with Delete Old Image <br />
 - Delete with Delete Old Image <br />
 - Creating Bug Controller And List Errors  <br />
 - Exception Handler Middleware <br />
 
-### Video 5 have : Coming soon (12/2/2024)
+[![Watch the video](https://img.youtube.com/vi/bQwQs81G_yU/0.jpg)](https://youtu.be/bQwQs81G_yU)
+<br /><br />
+### Video 5 have : 
 - Sorting <br />
 - Filtering  <br />
 - Pagination and Page Count <br />
