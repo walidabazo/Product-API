@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿//Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
+using Microsoft.EntityFrameworkCore;
 using Product.Core.Entities;
 using Product.Core.Interface;
 using Product.Infrastructure.Data;
@@ -20,6 +21,7 @@ namespace Product.Infrastructure.Repository
         {
             _context = context;
         }
+        //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
 
         public async Task AddAsync(T Entity)
         {
@@ -38,6 +40,7 @@ namespace Product.Infrastructure.Repository
 
          => _context.Set<T>().AsNoTracking().ToList();
 
+        //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
 
         public async Task<IReadOnlyList<T>> GetAllAsync()
         => await _context.Set<T>().AsNoTracking().ToListAsync();
@@ -54,6 +57,7 @@ namespace Product.Infrastructure.Repository
 
         public async Task<T> GetAsync(int id)
      => await _context.Set<T>().FindAsync(id);
+        //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
 
         public async Task<T> GetByidAsync(int id, params Expression<Func<T, object>>[] includes)
         {
@@ -68,6 +72,7 @@ namespace Product.Infrastructure.Repository
           //  return await ((DbSet<T>)query).FindAsync();
 
         }
+        //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
 
         public async Task UpdateAsync(int id, T Entity)
         {

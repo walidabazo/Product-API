@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿//Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -12,12 +13,14 @@ namespace Product.Infrastructure.Data
     {
        [Required]
         public string Name { get; set; }
-        [MaxLength(50)]
+        [MaxLength(500)]
         public string Description { get; set; }
         [Range(1,9999,ErrorMessage ="Price Limited By {0} and {1}") ]
         [RegularExpression(@"[0-9]*\.?[0-9]+",ErrorMessage ="{0} Must be Number !")]
         public decimal Price { get; set; }
     }
+    //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
+
     public class ProductDto : BaseProduct
     {
 
@@ -36,6 +39,8 @@ namespace Product.Infrastructure.Data
         public int CategoryId { get; set; }
         public IFormFile Image { get; set; }
     }
+    //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
+
     //Update Product
     public class UpdateProductDto : BaseProduct
     {

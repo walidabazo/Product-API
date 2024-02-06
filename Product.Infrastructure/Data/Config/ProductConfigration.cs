@@ -18,6 +18,7 @@ namespace Product.Infrastructure.Data.Config
             builder.Property(x => x.Name).HasMaxLength(128);
             builder.Property(x => x.Description).HasMaxLength(128);
             builder.Property(x => x.Price).HasColumnType("decimal(18,2)");
+            //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
 
             //Seeding 
             builder.HasData(

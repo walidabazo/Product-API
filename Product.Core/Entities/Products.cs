@@ -20,7 +20,8 @@ namespace Product.Core.Entities
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
-  
+        //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
+
 
 
     }

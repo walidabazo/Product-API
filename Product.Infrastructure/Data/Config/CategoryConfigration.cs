@@ -16,6 +16,7 @@ namespace Product.Infrastructure.Data.Config
             builder.Property(x => x.Id).IsRequired();
             builder.Property(x=>x.Name).HasMaxLength(50);
             builder.Property(x => x.Description ).HasMaxLength(50);
+            //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
 
             //Seeding 
             builder.HasData(

@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,28 +12,9 @@ namespace Product.Core.Sharing
     {
     
 
-        //public int PageSize
-        //{
-        //    get { return _pageSize; }
-        //    set { _pageSize = value > MaxPageSize ? MaxPageSize : value; }
-        //}
-
-        //public int PageNumber { get; set; } = 1;
-        //public string Sort { get; set; }
-        //public int? CategoryId { get; set; }
-
-        //private string _search;
-
-        //public string Search
-        //{
-        //    get { return _search; }
-        //    set { _search = value.ToLower(); }
-        //}
-
-
         //Page size
-        public int maxpagesize { get; set; } = 5;
-        private int pagesize = 3;
+        public int maxpagesize { get; set; } = 50;
+        private int pagesize = 13;
        public int Pagesize {
             get => pagesize;
             set => pagesize = value > maxpagesize ? maxpagesize : value;
@@ -51,6 +34,7 @@ namespace Product.Core.Sharing
             get { return _search; }
             set { _search = value.ToLower(); }
         }
+        //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
 
     }
 }

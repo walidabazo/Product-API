@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace Product.Infrastructure.Repository
 {
+    //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
+
     public class CategoryRepository : GenericRepository<Category>, IcategoryRepository
     {
         public CategoryRepository(ApplicationDbContext context) : base(context)

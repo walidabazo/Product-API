@@ -15,6 +15,7 @@ namespace Product.Infrastructure.Data
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
+        //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
 
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Products> Products { get; set; }
@@ -24,6 +25,7 @@ namespace Product.Infrastructure.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
+        //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
 
 
     }

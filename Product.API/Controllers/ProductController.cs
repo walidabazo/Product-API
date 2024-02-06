@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿//Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
+
+using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Product.API.Errors;
@@ -35,7 +37,7 @@ namespace Product.API.Controllers
             //var totalitems = await _uow.ProductRepository.CountAsync();
             var result = _mapper.Map<IReadOnlyList<ProductDto>>(src.ProductDtos);
 
-            return Ok(new Pagination<ProductDto>(productParams.PageNumber,productParams.Pagesize, src.TotalItems, result));
+            return Ok(new Pagination<ProductDto>(productParams.Pagesize, productParams.PageNumber, src.TotalItems, result));
         }
 
         [HttpGet("get-product-by-id/{id}")]

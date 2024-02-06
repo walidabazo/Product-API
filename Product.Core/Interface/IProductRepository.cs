@@ -1,4 +1,6 @@
-﻿using Product.Core.Entities;
+﻿//Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
+
+using Product.Core.Entities;
 using Product.Core.Sharing;
 using Product.Infrastructure.Data;
 using System;
@@ -17,6 +19,7 @@ namespace Product.Core.Interface
         Task<ReturnProductDto> GetAllAsync(ProductParams productParams);
         Task<bool> AddAsync(CreateProductDto dto);
         Task<bool> UpdateAsync(int id, UpdateProductDto dto);
+        //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
 
         Task<bool> DeleteAsync(int id);
     }

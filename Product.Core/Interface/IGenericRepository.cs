@@ -18,6 +18,7 @@ namespace Product.Core.Interface
 
         Task<T> GetByidAsync(int id, params Expression<Func<T, object>>[] includes);
 
+        //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
 
         Task<T> GetAsync(int id);
         Task AddAsync(T Entity);

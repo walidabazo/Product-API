@@ -2,6 +2,7 @@ using Microsoft.Extensions.FileProviders;
 using Product.API.Extensions;
 using Product.API.Middleware;
 using Product.Infrastructure;
+using StackExchange.Redis;
 using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +16,12 @@ builder.Services.AddSwaggerGen();
 
 //builder.Services.AddEndpointsApiExplorer();
 builder.Services.InfraStructureConfigration(builder.Configuration);
-
+//Configure Redis
+builder.Services.AddSingleton<IConnectionMultiplexer>(i =>
+{
+    var configure = ConfigurationOptions.Parse(builder.Configuration.GetConnectionString("Redis"), true);
+    return ConnectionMultiplexer.Connect(configure);
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,3 +41,5 @@ app.UseStaticFiles();
 app.MapControllers();
 
 app.Run();
+//Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
+

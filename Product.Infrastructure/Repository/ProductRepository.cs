@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿//Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
+
+using AutoMapper;
 using Azure.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
@@ -64,6 +66,8 @@ namespace Product.Infrastructure.Repository
             return false;
         }
 
+        //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
+
         //update
         public async Task<bool> UpdateAsync(int id, UpdateProductDto dto)
         {
@@ -111,6 +115,8 @@ namespace Product.Infrastructure.Repository
             }
             return false;
         }
+
+        //Asp.Net Core 8 Web API :https://www.youtube.com/watch?v=UqegTYn2aKE&list=PLazvcyckcBwitbcbYveMdXlw8mqoBDbTT&index=1
 
         //delete 
         public async Task<bool> DeleteAsync(int id)
