@@ -106,7 +106,7 @@ Redis is an open source in-memory data store that works really well as a cache o
  - AutoMapper Config For Orders
 
 # Front End Angular 17 
-## Fuul Course  :
+## Full Course  :
 https://www.youtube.com/watch?v=gBJgEfigKLc&list=PLazvcyckcBwgxtohJFrQw8uwpFUrsOUcb
 
 ## Code
