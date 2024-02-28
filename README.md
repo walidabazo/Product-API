@@ -66,7 +66,7 @@ ASP.NET Core Web API Tutorial- asp.net core web api is the latest and most power
 [![Watch the video](https://img.youtube.com/vi/RmzlBSS3tDE/0.jpg)](https://youtu.be/RmzlBSS3tDE)
 <br /><br />
 ### Video 6 have : 
-redis database
+ - redis database
  
 Redis is an open source in-memory data store that works really well as a cache or message broker, but it can also be used as a database when you don’t need all the features of a traditional database. It offers excellent performance, with the ability to quickly read and write data to memory.
 
@@ -74,36 +74,36 @@ Redis is an open source in-memory data store that works really well as a cache o
 [![Watch the video](https://img.youtube.com/vi/wFmCBF2XTYw/0.jpg)](https://youtu.be/wFmCBF2XTYw)
 <br /><br />
 ### Video 7 have : 
-Setting up Identity packages
-Adding identitydbcontext and apply migration
-Configure Identity and Seeding 
-Adding Account Controller
-egister New User
-Adding and Configure  Token Generation Services
-Testing Authorize Attribute
-Get Current User And Check Email Existence
-Get User Address
-Model Validation
-Checking Email And Password Validation
-Authorize Swagger
+ - Setting up Identity packages
+ - Adding identitydbcontext and apply migration
+ - Configure Identity and Seeding 
+ - Adding Account Controller
+ - egister New User
+ - Adding and Configure  Token Generation Services
+ - Testing Authorize Attribute
+ - Get Current User And Check Email Existence
+ - Get User Address
+ - Model Validation
+ - Checking Email And Password Validation
+ - Authorize Swagger
 
 
 
 [![Watch the video](https://img.youtube.com/vi/nn3Psfc99Tg/0.jpg)](https://youtu.be/nn3Psfc99Tg)
 <br /><br />
 ### Video 8 have : 
-Creating Order Entity
-Configuring Order Entities
-Creating Order Migration
-Creating Order Services
-Implementing Create Order Method
-Creating Order Controller
-Testing Check out Endpoint
-Implementing Checkout Process
-Implementing Order get Methods
-Testing Order Controller Get Methods
-Shaping The Order 
-AutoMapper Config For Orders
+ - Creating Order Entity
+ - Configuring Order Entities
+ - Creating Order Migration
+ - Creating Order Services
+ - Implementing Create Order Method
+ - Creating Order Controller
+ - Testing Check out Endpoint
+ - Implementing Checkout Process
+ - Implementing Order get Methods
+ - Testing Order Controller Get Methods
+ - Shaping The Order 
+ - AutoMapper Config For Orders
 
 # Front End Angular 17 
 ## Fuul Course  :
