@@ -1,4 +1,4 @@
-# Asp.net Core 8 Web API Full Course all in 5 Videos this Video 1 
+# Asp.net Core 8 Web API Full Course
 
 [![Watch the video](https://img.youtube.com/vi/UqegTYn2aKE/0.jpg)](https://youtu.be/UqegTYn2aKE)
 
@@ -110,7 +110,7 @@ Redis is an open source in-memory data store that works really well as a cache o
 https://www.youtube.com/watch?v=gBJgEfigKLc&list=PLazvcyckcBwgxtohJFrQw8uwpFUrsOUcb
 
 ## Code
-https://github.com/walidabazo/Product-API
+[https://github.com/walidabazo/Product-API](https://github.com/walidabazo/Product-angular-ecom)
 
 To show all videos youtube channel  <br />
 https://www.youtube.com/channel/UCNJVG9_IebHe-NF-K_Y8Grw?sub_confirmation=1
