@@ -105,5 +105,12 @@ Testing Order Controller Get Methods
 Shaping The Order 
 AutoMapper Config For Orders
 
+# Front End Angular 17 
+## Fuul Course  :
+https://www.youtube.com/watch?v=gBJgEfigKLc&list=PLazvcyckcBwgxtohJFrQw8uwpFUrsOUcb
+
+## Code
+https://github.com/walidabazo/Product-API
+
 To show all videos youtube channel  <br />
 https://www.youtube.com/channel/UCNJVG9_IebHe-NF-K_Y8Grw?sub_confirmation=1
